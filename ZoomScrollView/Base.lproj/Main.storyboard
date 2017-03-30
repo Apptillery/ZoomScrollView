@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ZoomScrollView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wVl-EY-xeR">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KQo-gY-agu">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flower5" translatesAutoresizingMaskIntoConstraints="NO" id="Jmz-mQ-mST">
+                                                <rect key="frame" x="0.0" y="158.5" width="375" height="350"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="Jmz-mQ-mST" firstAttribute="top" relation="greaterThanOrEqual" secondItem="KQo-gY-agu" secondAttribute="top" id="00L-fc-MfP"/>
+                                            <constraint firstItem="Jmz-mQ-mST" firstAttribute="leading" secondItem="KQo-gY-agu" secondAttribute="leading" id="AoE-n2-bpf"/>
+                                            <constraint firstItem="Jmz-mQ-mST" firstAttribute="centerY" secondItem="KQo-gY-agu" secondAttribute="centerY" id="kAM-8e-Gff"/>
+                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Jmz-mQ-mST" secondAttribute="bottom" id="mdQ-ux-sdg"/>
+                                            <constraint firstAttribute="trailing" secondItem="Jmz-mQ-mST" secondAttribute="trailing" id="u8l-7d-UgD"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="KQo-gY-agu" secondAttribute="bottom" id="7SG-jk-kGT"/>
+                                    <constraint firstItem="KQo-gY-agu" firstAttribute="top" secondItem="wVl-EY-xeR" secondAttribute="top" id="AZp-Ok-rgA"/>
+                                    <constraint firstAttribute="trailing" secondItem="KQo-gY-agu" secondAttribute="trailing" id="v1f-fG-jNB"/>
+                                    <constraint firstItem="KQo-gY-agu" firstAttribute="leading" secondItem="wVl-EY-xeR" secondAttribute="leading" id="vq3-yL-O87"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wVl-EY-xeR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="8st-Zp-BtJ"/>
+                            <constraint firstAttribute="trailing" secondItem="wVl-EY-xeR" secondAttribute="trailing" id="9dC-q1-co5"/>
+                            <constraint firstItem="KQo-gY-agu" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="Hdt-VF-4aN"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="wVl-EY-xeR" secondAttribute="bottom" id="OgC-xC-XdG"/>
+                            <constraint firstItem="KQo-gY-agu" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="YT0-El-Csd"/>
+                            <constraint firstItem="wVl-EY-xeR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="cFY-hi-xHl"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="containerView" destination="KQo-gY-agu" id="OwG-FR-Ya7"/>
+                        <outlet property="scrollView" destination="wVl-EY-xeR" id="RmF-jM-WGe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="flower5" width="527" height="350"/>
+    </resources>
+</document>
